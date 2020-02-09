@@ -1,6 +1,7 @@
 package com.javarush.task.task09.task0929;
 
 import java.io.*;
+import java.text.ParseException;
 
 /* 
 Обогатим код функциональностью!
@@ -11,18 +12,40 @@ public class Solution {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         String sourceFileName = reader.readLine();
-        String destinationFileName = reader.readLine();
 
-        InputStream fileInputStream = getInputStream(sourceFileName);
-        OutputStream fileOutputStream = getOutputStream(destinationFileName);
+        try {
+            InputStream fileInputStream = getInputStream(sourceFileName);
 
-        while (fileInputStream.available() > 0) {
-            int data = fileInputStream.read();
-            fileOutputStream.write(data);
+            String destinationFileName = reader.readLine();
+            OutputStream fileOutputStream = getOutputStream(destinationFileName);
+
+            int data;
+            while ((data = fileInputStream.read())!= -1)
+            {
+                fileOutputStream.write(data);
+            }
+
+            fileInputStream.close();
+            fileOutputStream.close();
+        }
+        catch (FileNotFoundException exception) {
+            System.out.println("Файл не существует");
+            sourceFileName = reader.readLine();
+            InputStream fileInputStream = getInputStream(sourceFileName);
+
+            String destinationFileName = reader.readLine();
+            OutputStream fileOutputStream = getOutputStream(destinationFileName);
+
+            int data;
+            while ((data = fileInputStream.read())!= -1)
+            {
+                fileOutputStream.write(data);
+            }
+
+            fileInputStream.close();
+            fileOutputStream.close();
         }
 
-        fileInputStream.close();
-        fileOutputStream.close();
     }
 
     public static InputStream getInputStream(String fileName) throws IOException {
