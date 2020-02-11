@@ -18,7 +18,7 @@ public class Solution {
                 'з','и','й','к','л','м','н','о',
                 'п','р','с','т','у','ф','х','ц',
                 'ч','ш','щ','ъ','ы','ь','э','ю','я');
-        
+
         // Ввод строк
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < 10; i++) {
