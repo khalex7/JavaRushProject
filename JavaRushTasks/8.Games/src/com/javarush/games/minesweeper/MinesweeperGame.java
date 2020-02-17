@@ -14,8 +14,12 @@ public class MinesweeperGame extends Game {
     private static final String MINE = "\uD83D\uDCA3";
     //mine symbol
 
+    private static final String FLAG = "\uD83D\uDEA9";
+
     private int countMinesOnField = 0;
     //mines counter
+
+    private int countFlags;
 
     @Override
     public void initialize() {
@@ -23,8 +27,13 @@ public class MinesweeperGame extends Game {
         //Set number of cells in width and height
         createGame();
         //create game
-
     }
+
+    @Override
+    public void onMouseLeftClick(int x, int y) {
+        openTile(x, y);
+    }
+
     private GameObject[][] gameField = new GameObject[SIDE][SIDE];
 
     private void createGame() {
@@ -34,13 +43,14 @@ public class MinesweeperGame extends Game {
                 //set mine or not
                 if(isMine)
                     countMinesOnField++;
-                gameField[x][y] = new GameObject(x, y, isMine);
+                gameField[y][x] = new GameObject(x, y, isMine);
                 //set array by new objects
                 setCellColor(x, y, Color.AQUAMARINE);
                 //set color for every cell
             }
         }
         countMineNeighbors();
+        countFlags = countMinesOnField;
         //count neighbors mines for every not mines cell
     }
     
@@ -67,15 +77,19 @@ public class MinesweeperGame extends Game {
     private void countMineNeighbors() {
         for (int y = 0; y < gameField.length; y++) {
             for (int x = 0; x < gameField.length; x++) {
-                if(!gameField[x][y].isMine) {
-                    List<GameObject> neighborCells = getNeighbors(gameField[x][y]);
+                if(!gameField[y][x].isMine) {
+                    List<GameObject> neighborCells = getNeighbors(gameField[y][x]);
                     int countMines = 0;
                     for (GameObject object : neighborCells) {
                         if (object.isMine) {
                             countMines++;
                         }
                     }
-                    gameField[x][y].countMineNeighbors = countMines;
+                    //count neighbor mines for cell
+                    gameField[y][x].countMineNeighbors = countMines;
+                }
+                else {
+                    countMinesOnField++;
                 }
             }
         }
@@ -83,12 +97,17 @@ public class MinesweeperGame extends Game {
     //that counts neighbor mines
 
     private void openTile(int x, int y) {
-        if (gameField[x][y].isMine) {
+        if (gameField[y][x].isMine) {
             setCellValue(x, y, MINE);
+            setCellColor(x, y, Color.RED);
         }
+        //set mine opened
         else {
-            setCellNumber(x, y, gameField[x][y].countMineNeighbors);
+            setCellNumber(x, y, gameField[y][x].countMineNeighbors);
+            setCellColor(x, y, Color.LIGHTGREEN);
         }
-        
+        //set free cell opened
+        gameField[y][x].isOpen = true;
+        //set both type cell opened
     }
 }
