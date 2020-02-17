@@ -34,6 +34,11 @@ public class MinesweeperGame extends Game {
         openTile(x, y);
     }
 
+    @Override
+    public void onMouseRightClick(int x, int y) {
+        markTile(x, y);
+    }
+
     private GameObject[][] gameField = new GameObject[SIDE][SIDE];
 
     private void createGame() {
@@ -100,13 +105,15 @@ public class MinesweeperGame extends Game {
         if (gameField[y][x].isMine) {
             setCellValue(x, y, MINE);
             setCellColor(x, y, Color.RED);
-            gameField[y][x].isOpen = true;
         }
         //set mine opened
         else {
             setCellColor(x, y, Color.LIGHTGREEN);
-            gameField[y][x].isOpen = true;
+        }
+        gameField[y][x].isOpen = true;
+        //set free cell opened
 
+        if (gameField[y][x].isMine == false) {
             if(gameField[y][x].countMineNeighbors == 0) {
                 List<GameObject> nullMineNeighbors = getNeighbors(gameField[y][x]);
                 for (GameObject object : nullMineNeighbors) {
@@ -114,6 +121,7 @@ public class MinesweeperGame extends Game {
                         openTile(object.x, object.y);
                     }
                 }
+                setCellValue(x, y, "");
             }
             //open neighbor cells if this == 0
             else {
@@ -121,6 +129,20 @@ public class MinesweeperGame extends Game {
             }
             //set number of neighbors for opened
         }
-        //set free cell opened
+    }
+
+    private void markTile(int x, int y) {
+        if(gameField[y][x].isOpen == false) {
+            gameField[y][x].isFlag = !gameField[y][x].isFlag;
+            if(gameField[y][x].isFlag && countFlags > 0) {
+                setCellValue(x, y, FLAG);
+                countFlags--;
+            }
+            else {
+                setCellValue(x, y, "");
+                countFlags++;
+            }
+            System.out.println(countFlags + " " + gameField[y][x].isFlag);
+        }
     }
 }
