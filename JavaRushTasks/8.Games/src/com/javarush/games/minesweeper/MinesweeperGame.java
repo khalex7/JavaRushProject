@@ -1,0 +1,94 @@
+package com.javarush.games.minesweeper;
+import com.javarush.engine.cell.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MinesweeperGame extends Game {
+    private static final int SIDE = 9;
+    //set side
+
+    private static final int MINEPROBABILITY = 10;
+    //set probability of mine. it is 1/MINEPROBABILITY
+
+    private static final String MINE = "\uD83D\uDCA3";
+    //mine symbol
+
+    private int countMinesOnField = 0;
+    //mines counter
+
+    @Override
+    public void initialize() {
+        setScreenSize(SIDE, SIDE);
+        //Set number of cells in width and height
+        createGame();
+        //create game
+
+    }
+    private GameObject[][] gameField = new GameObject[SIDE][SIDE];
+
+    private void createGame() {
+        for (int y = 0; y < gameField.length; y++) {
+            for(int x = 0; x < gameField.length; x++) {
+                boolean isMine = (getRandomNumber(MINEPROBABILITY) == 7);
+                //set mine or not
+                if(isMine)
+                    countMinesOnField++;
+                gameField[x][y] = new GameObject(x, y, isMine);
+                //set array by new objects
+                setCellColor(x, y, Color.AQUAMARINE);
+                //set color for every cell
+            }
+        }
+        countMineNeighbors();
+        //count neighbors mines for every not mines cell
+    }
+    
+    private List<GameObject> getNeighbors(GameObject gameObject) {
+        List<GameObject> result = new ArrayList<>();
+        for (int y = gameObject.y - 1; y <= gameObject.y + 1; y++) {
+            for (int x = gameObject.x - 1; x <= gameObject.x + 1; x++) {
+                if (y < 0 || y >= SIDE) {
+                    continue;
+                }
+                if (x < 0 || x >= SIDE) {
+                    continue;
+                }
+                if (gameField[y][x] == gameObject) {
+                    continue;
+                }
+                result.add(gameField[y][x]);
+            }
+        }
+        return result;
+    }
+    //find neighbor cells
+
+    private void countMineNeighbors() {
+        for (int y = 0; y < gameField.length; y++) {
+            for (int x = 0; x < gameField.length; x++) {
+                if(!gameField[x][y].isMine) {
+                    List<GameObject> neighborCells = getNeighbors(gameField[x][y]);
+                    int countMines = 0;
+                    for (GameObject object : neighborCells) {
+                        if (object.isMine) {
+                            countMines++;
+                        }
+                    }
+                    gameField[x][y].countMineNeighbors = countMines;
+                }
+            }
+        }
+    }
+    //that counts neighbor mines
+
+    private void openTile(int x, int y) {
+        if (gameField[x][y].isMine) {
+            setCellValue(x, y, MINE);
+        }
+        else {
+            setCellNumber(x, y, gameField[x][y].countMineNeighbors);
+        }
+        
+    }
+}
