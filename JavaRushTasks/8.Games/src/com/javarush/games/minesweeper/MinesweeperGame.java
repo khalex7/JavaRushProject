@@ -100,14 +100,27 @@ public class MinesweeperGame extends Game {
         if (gameField[y][x].isMine) {
             setCellValue(x, y, MINE);
             setCellColor(x, y, Color.RED);
+            gameField[y][x].isOpen = true;
         }
         //set mine opened
         else {
-            setCellNumber(x, y, gameField[y][x].countMineNeighbors);
             setCellColor(x, y, Color.LIGHTGREEN);
+            gameField[y][x].isOpen = true;
+
+            if(gameField[y][x].countMineNeighbors == 0) {
+                List<GameObject> nullMineNeighbors = getNeighbors(gameField[y][x]);
+                for (GameObject object : nullMineNeighbors) {
+                    if (object.isOpen == false) {
+                        openTile(object.x, object.y);
+                    }
+                }
+            }
+            //open neighbor cells if this == 0
+            else {
+                setCellNumber(x, y, gameField[y][x].countMineNeighbors);
+            }
+            //set number of neighbors for opened
         }
         //set free cell opened
-        gameField[y][x].isOpen = true;
-        //set both type cell opened
     }
 }
