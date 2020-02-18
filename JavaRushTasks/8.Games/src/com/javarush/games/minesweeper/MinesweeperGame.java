@@ -22,11 +22,14 @@ public class MinesweeperGame extends Game {
     private int countFlags;
     //how many flags gamer can set
 
-    private boolean isGameStopped;
+    private boolean isGameStopped = false;
     //set true when game stopped
 
     private int countClosedTiles = SIDE*SIDE;
     //set number of not opened cells
+
+    private int score;
+    //score
 
     @Override
     public void initialize() {
@@ -38,7 +41,10 @@ public class MinesweeperGame extends Game {
 
     @Override
     public void onMouseLeftClick(int x, int y) {
-        openTile(x, y);
+        if(!isGameStopped)
+            openTile(x, y);
+        else
+            restart();
     }
 
     @Override
@@ -56,18 +62,17 @@ public class MinesweeperGame extends Game {
                 gameField[y][x] = new GameObject(x, y, isMine);
                 //set array by new objects
                 setCellColor(x, y, Color.AQUAMARINE);
+                setCellValue(x, y, "");
                 //set color for every cell
                 if (gameField[y][x].isMine == true)
                     countMinesOnField++;
-                System.out.println(x + " " + y + "  " + isMine + " " + countMinesOnField);
             }
         }
         countMineNeighbors();
         countFlags = countMinesOnField;
         //count neighbors mines for every not mines cell
-        isGameStopped = false;
     }
-    
+
     private List<GameObject> getNeighbors(GameObject gameObject) {
         List<GameObject> result = new ArrayList<>();
         for (int y = gameObject.y - 1; y <= gameObject.y + 1; y++) {
@@ -126,7 +131,9 @@ public class MinesweeperGame extends Game {
             countClosedTiles--;
             //set free cell opened
 
-            System.out.println(countClosedTiles + " " + countMinesOnField);
+            score+=5;
+            setScore(score);
+            //set and view score
 
             if(countClosedTiles == countMinesOnField) {
                 win();
@@ -183,5 +190,13 @@ public class MinesweeperGame extends Game {
     }
     //win method
 
-
+    private void restart() {
+        isGameStopped = false;
+        countClosedTiles = SIDE*SIDE;
+        score = 0;
+        countMinesOnField = 0;
+        setScore(0);
+        createGame();
+    }
+    //restart after finish
 }
