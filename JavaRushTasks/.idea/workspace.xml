@@ -5,9 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaRushPlugin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/JavaRushPlugin.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out.log" beforeDir="false" afterPath="$PROJECT_DIR$/out.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/out.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2.JavaCore/META-INF/2.JavaCore.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/2.JavaCore/com/javarush/task/task14/task1421/Singleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/2.JavaCore/com/javarush/task/task14/task1421/Singleton.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +56,7 @@
       <recent name="D:\intellijSandbox\JavaRushTasks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (5)">
+  <component name="RunManager" selected="Application.Solution (2)">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -289,12 +286,12 @@
       <method />
     </configuration>
     <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1515.Solution" />
+      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1528.Solution" />
       <module name="2.JavaCore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.javarush.task.task15.task1515.*" />
+          <option name="PATTERN" value="com.javarush.task.task15.task1528.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -303,12 +300,26 @@
       </method>
     </configuration>
     <configuration name="Solution (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1516.Solution" />
+      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1531.Solution" />
       <module name="2.JavaCore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.javarush.task.task15.task1516.*" />
+          <option name="PATTERN" value="com.javarush.task.task15.task1531.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1526.Solution" />
+      <module name="2.JavaCore" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javarush.task.task15.task1526.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -317,12 +328,12 @@
       </method>
     </configuration>
     <configuration name="Solution (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1514.Solution" />
+      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1527.Solution" />
       <module name="2.JavaCore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.javarush.task.task15.task1514.*" />
+          <option name="PATTERN" value="com.javarush.task.task15.task1527.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -331,26 +342,12 @@
       </method>
     </configuration>
     <configuration name="Solution (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1518.Solution" />
+      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1529.Solution" />
       <module name="2.JavaCore" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.javarush.task.task15.task1518.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.javarush.task.task15.task1517.Solution" />
-      <module name="2.JavaCore" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javarush.task.task15.task1517.*" />
+          <option name="PATTERN" value="com.javarush.task.task15.task1529.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -438,11 +435,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution (5)" />
-        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Solution (2)" />
+        <item itemvalue="Application.Solution (5)" />
         <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Solution (4)" />
+        <item itemvalue="Application.Solution (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -504,12 +501,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="4" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1592043929209" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1589134334909">
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser" timestamp="1592610280550">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1587304946811" />
     <state x="1966" y="103" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587301476271" />
-    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1589134334909" />
+    <state x="488" y="74" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1592610280550" />
     <state x="363" y="99" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1592042715623">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -518,36 +515,68 @@
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
     <state x="2007" y="374" width="417" height="266" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587251219012" />
-    <state width="1323" height="140" key="GridCell.Tab.0.bottom" timestamp="1592082566165">
+    <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1592142465544">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1366.728@0.0.1366.728" timestamp="1592142465544" />
+    <state x="438" y="66" key="#xdebugger.evaluate" timestamp="1592515108748">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="438" y="66" key="#xdebugger.evaluate/0.0.1366.728@0.0.1366.728" timestamp="1592515108748" />
+    <state width="392" height="456" key="DebuggerActiveHint" timestamp="1592515101842">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="392" height="456" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1592515101842" />
+    <state width="661" height="140" key="GridCell.Tab.0.bottom" timestamp="1592611117836">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="141" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1587305440003" />
     <state width="1637" height="271" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587302787611" />
-    <state width="1323" height="140" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592082566165" />
-    <state width="1323" height="140" key="GridCell.Tab.0.center" timestamp="1592082566165">
+    <state width="661" height="140" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592611117836" />
+    <state width="661" height="140" key="GridCell.Tab.0.center" timestamp="1592611117836">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="141" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1587305440002" />
     <state width="1637" height="271" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587302787610" />
-    <state width="1323" height="140" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592082566165" />
-    <state width="1323" height="140" key="GridCell.Tab.0.left" timestamp="1592082566164">
+    <state width="661" height="140" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1592611117836" />
+    <state width="661" height="140" key="GridCell.Tab.0.left" timestamp="1592611117835">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="141" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1587305440001" />
     <state width="1637" height="271" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587302787610" />
-    <state width="1323" height="140" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592082566164" />
-    <state width="1323" height="140" key="GridCell.Tab.0.right" timestamp="1592082566165">
+    <state width="661" height="140" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1592611117835" />
+    <state width="661" height="140" key="GridCell.Tab.0.right" timestamp="1592611117836">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="141" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1587305440002" />
     <state width="1637" height="271" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587302787611" />
-    <state width="1323" height="140" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592082566165" />
+    <state width="661" height="140" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1592611117836" />
+    <state width="661" height="223" key="GridCell.Tab.1.bottom" timestamp="1592607332773">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1592607332773" />
+    <state width="661" height="223" key="GridCell.Tab.1.center" timestamp="1592607332773">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1592607332773" />
+    <state width="661" height="223" key="GridCell.Tab.1.left" timestamp="1592607332773">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1592607332773" />
+    <state width="661" height="223" key="GridCell.Tab.1.right" timestamp="1592607332773">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="661" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1592607332773" />
     <state x="390" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1590571055448">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="390" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1680.1010@0.0.1366.728" timestamp="1586893657493" />
     <state x="1846" y="268" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.0.1680.1010@1366.0.1680.1010" timestamp="1587249222336" />
     <state x="390" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590571055448" />
+    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592170532961">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1592170532961" />
     <state x="2025" y="-8" width="812" height="565" maximized="true" key="dock-window-1" timestamp="1587302853588">
       <screen x="1366" y="0" width="1680" height="1010" />
     </state>
@@ -566,9 +595,62 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1589213245322" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1589133427669">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1592335108864">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1589133427669" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1592335108864" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>12</line>
+          <properties field="f1" class="com.javarush.task.task15.task1526.Solution.A" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/2.JavaCore/src/com/javarush/task/task15/task1526/Solution.java</url>
+          <line>25</line>
+          <properties field="f1" class="com.javarush.task.task15.task1526.Solution.B" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
