@@ -41,9 +41,29 @@ public class Solution {
 
     public static class ReaderThread extends Thread {
         private List<String> result = new ArrayList<String>();
+        //public boolean isInterrupted = false;
 
         public void run() {
             //add your code here - добавьте код тут
+            try {
+                while (!isInterrupted()) {
+                    synchronized (reader) {
+                        if (reader.ready()) {
+                            String a = reader.readLine();
+                            result.add(a);
+                            Thread.sleep(1);
+                            readStringCount.addAndGet(1);
+                        }
+                    }
+                }
+            } catch (IOException e) {
+
+            }
+            catch (InterruptedException e) {
+
+            }
+
+
         }
 
         @Override
