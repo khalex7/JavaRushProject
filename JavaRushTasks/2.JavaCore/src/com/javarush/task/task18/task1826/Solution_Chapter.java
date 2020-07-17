@@ -4,12 +4,18 @@ package com.javarush.task.task18.task1826;
 Шифровка
 */
 
+import javax.crypto.*;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.security.InvalidKeyException;
+import java.security.Key;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 
-public class Solution {
+public class Solution_Chapter {
     public static void main(String[] args) {
         try {
             switch (args[0]) {
@@ -28,6 +34,14 @@ public class Solution {
         }
     }
 
+    private static Key key;
+
+    static {
+        byte[] encoded = {-101, 18, -119, 80, 43, 66, 6, -42, -95, 31, 85, -44, -118, -97, 82, 77, -45, 110, 44, 12, 32, -15, -36, -110, -121, -99, -45, 36, -128, -122, -22, -49};
+        key = new SecretKeySpec(encoded, "AES");
+    }
+
+    ;
 
     private static void encryption(String fileName, String fileOutputName) {
         try {
@@ -35,8 +49,9 @@ public class Solution {
             FileOutputStream fileOutput = new FileOutputStream(fileOutputName);
             byte[] buffer = new byte[fileInput.available()];
             int count = fileInput.read(buffer);
-            Crypt crypt = new Crypt();
-            byte[] cipherBuffer = crypt.encrypt(buffer);
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.ENCRYPT_MODE, key);
+            byte[] cipherBuffer = cipher.doFinal(buffer);
             fileOutput.write(cipherBuffer);
             fileOutput.close();
             fileInput.close();
@@ -46,6 +61,16 @@ public class Solution {
         }
         catch (IOException e) {
 
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (BadPaddingException e) {
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
         }
     }
     private static void decryption(String fileName, String fileOutputName) {
@@ -54,31 +79,29 @@ public class Solution {
             FileOutputStream fileOutput = new FileOutputStream(fileOutputName);
             byte[] buffer = new byte[fileInput.available()];
             int count = fileInput.read(buffer);
-            Crypt crypt = new Crypt();
-            byte[] cipherBuffer = crypt.encrypt(buffer);
+            Cipher cipher = Cipher.getInstance("AES");
+            cipher.init(Cipher.DECRYPT_MODE, key);
+            byte[] cipherBuffer = cipher.doFinal(buffer);
             fileOutput.write(cipherBuffer);
             fileOutput.close();
             fileInput.close();
-        }
+
+            System.out.println("Dec: " + key.getEncoded());     }
         catch (FileNotFoundException e) {
 
         }
         catch (IOException e) {
 
-        }
-    }
-    private static class Crypt {
-        protected byte[] encrypt (byte[] array) {
-            for(int i = 0; i < array.length; i++) {
-                array[i] = (byte) (~array[i]);
-            }
-            return array;
-        }
-        protected byte[] decrypt (byte[] array) {
-            for(int i = 0; i < array.length; i++) {
-                array[i]= (byte) ~array[i];
-            }
-            return array;
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (BadPaddingException e) {
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
         }
     }
 
